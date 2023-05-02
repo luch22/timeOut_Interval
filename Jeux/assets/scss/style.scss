@@ -7,11 +7,14 @@ body {
       text-shadow: -6px 8px 20px #031e239c;
     }
   }
+  transition: all 0.5s;
   background-color: grey;
   .scorePoint {
+    transition: all 0.5s;
     background-color: green;
   }
   .gameWhackaMole {
+    text-align: center;
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     grid-template-rows: 30% 30% 30%;

@@ -24,8 +24,7 @@ function getNewMole() {
   oldValue = value;
   divGame[value].classList.add("selected");
   elementSelected = divGame[value];
-  elementSelected.addEventListener("click", getDisplayScore, { once: true });
-  console.log(countOfmole);
+  elementSelected.addEventListener("click", getDisplayScore, { once: true }); 
   if (countOfmole == 0) {
     clearInterval(1);
     sectionGame.innerHTML = `Vous avez obtenu ${score}/${countOfmoleOrigine}`;
