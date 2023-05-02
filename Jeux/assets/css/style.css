@@ -1,0 +1,36 @@
+body {
+  background-color: grey;
+}
+body header h1 {
+  text-align: center;
+  font-size: 4em;
+  color: rgb(50, 239, 239);
+}
+body .gameWhackaMole {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 30% 30% 30%;
+  justify-content: space-around;
+  justify-items: center;
+  align-content: space-around;
+  align-items: center;
+  width: 85%;
+  height: 600px;
+  border: solid lightcyan 4px;
+  margin: auto;
+}
+body .gameWhackaMole div {
+  background-color: #2d7f8d;
+  border: 1px solid #fff;
+  box-shadow: inset -6px 8px 20px 2px rgba(3, 30, 35, 0.6117647059);
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+}
+body .score {
+  background-color: tomato;
+  width: 85%;
+  height: 200px;
+  margin: auto;
+  margin-top: 50px;
+}/*# sourceMappingURL=style.css.map */
