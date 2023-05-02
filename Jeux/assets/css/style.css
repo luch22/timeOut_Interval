@@ -3,8 +3,12 @@ body {
 }
 body header h1 {
   text-align: center;
-  font-size: 4em;
-  color: rgb(50, 239, 239);
+  font-size: 8vw;
+  color: #62a5b3;
+  text-shadow: -6px 8px 20px rgba(3, 30, 35, 0.6117647059);
+}
+body .scorePoint {
+  background-color: green;
 }
 body .gameWhackaMole {
   display: grid;
@@ -26,6 +30,10 @@ body .gameWhackaMole div {
   border-radius: 50px;
   height: 100px;
   width: 100px;
+}
+body .gameWhackaMole .selected {
+  cursor: pointer;
+  background-color: #bc3624;
 }
 body .score {
   background-color: tomato;

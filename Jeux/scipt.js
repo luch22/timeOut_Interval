@@ -1,66 +1,35 @@
 function getRandomMole() {
-  return Math.floor(Math.random() * 13);
+  return Math.floor(Math.random() * 12);
 }
+
 const sectionGame = document.querySelector(".gameWhackaMole");
 let divGame = sectionGame.querySelectorAll("div");
+let elementSelected;
+let oldValue = 0;
 let score = 0;
-divGame.forEach((element) => {
-  element.addEventListener("click", (e) => {});
-});
+let countOfmole = prompt("Combien de Taupe voulez vous tapez ?");
+let countOfmoleOrigine = countOfmole;
+
+function getDisplayScore() {
+  sectionGame.classList.add("scorePoint");
+  const displayScore = document.querySelector(".score");
+  score++;
+  displayScore.innerHTML = `<span>SCORE:${score}</span>`;
+}
 
 function getNewMole() {
   let value = getRandomMole();
-  switch (value) {
-    case 1:
-      console.log(value);
-      score++;
-      break;
-    case 2:
-      console.log(value);
-      score++;
-      break;
-    case 3:
-      console.log(value);
-      score++;
-      break;
-    case 4:
-      console.log(value);
-      score++;
-      break;
-    case 5:
-      console.log(value);
-      score++;
-      break;
-    case 6:
-      console.log(value);
-      score++;
-      break;
-    case 7:
-      console.log(value);
-      score++;
-      break;
-    case 8:
-      console.log(value);
-      score++;
-      break;
-    case 9:
-      console.log(value);
-      score++;
-      break;
-    case 10:
-      console.log(value);
-      score++;
-      break;
-    case 11:
-      console.log(value);
-      score++;
-      break;
-    case 12:
-      console.log(value);
-      score++;
-      break;
-    default:
-      break;
+  sectionGame.classList.remove("scorePoint");
+  divGame[oldValue].classList.remove("selected");
+  oldValue = value;
+  divGame[value].classList.add("selected");
+  elementSelected = divGame[value];
+  elementSelected.addEventListener("click", getDisplayScore, { once: true });
+  console.log(countOfmole);
+  if (countOfmole == 0) {
+    clearInterval(1);
+    sectionGame.innerHTML = `Vous avez obtenu ${score}/${countOfmoleOrigine}`;
   }
+  countOfmole--;
 }
-setInterval(getNewMole, 3000);
+setInterval(getNewMole, 1500);

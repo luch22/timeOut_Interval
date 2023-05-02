@@ -2,11 +2,15 @@ body {
   header {
     h1 {
       text-align: center;
-      font-size: 4em;
-      color: rgb(50, 239, 239);
+      font-size: 8vw;
+      color: #62a5b3;
+      text-shadow: -6px 8px 20px #031e239c;
     }
   }
   background-color: grey;
+  .scorePoint {
+    background-color: green;
+  }
   .gameWhackaMole {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -20,12 +24,16 @@ body {
     border: solid lightcyan 4px;
     margin: auto;
     div {
-      background-color: adjust-hue($color: #2d7f8d, $degrees: 0);
+      background-color: #2d7f8d;
       border: 1px solid #fff;
       box-shadow: inset -6px 8px 20px 2px #031e239c;
       border-radius: 50px;
       height: 100px;
       width: 100px;
+    }
+    .selected {
+      cursor: pointer;
+      background-color: #bc3624;
     }
   }
   .score {
